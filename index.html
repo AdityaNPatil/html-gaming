@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Games</title>
+
+    <style>
+        body {
+            background-color: rgb(26, 24, 24);
+            color: rgb(221, 221, 221);
+        }
+
+        /* navbar */
+        #nav {
+            z-index: 5;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            border: 2px solid aqua;
+
+            /* margin: 10px; */
+
+            width: 100%;
+
+            position: sticky;
+            left: 0px;
+            top: 0px;
+            background-color: black;
+        }
+
+        #navitems {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+
+            width: 900px;
+        }
+
+        #navitems a {
+            text-decoration: none;
+            color: rgb(221, 221, 221);
+        }
+
+        #navitems a:hover {
+            color: lime;
+        }
+
+        #navitems a:active {
+            color: red;
+        }
+
+        #navitems li {
+            list-style: none;
+            cursor: pointer;
+            transition: all 0.5s;
+            font-size: 18px;
+        }
+
+        #navitems li:hover {
+            color: lime;
+        }
+
+        #navitems li:active {
+            color: red;
+        }
+
+        #logoimage {
+            height: 50px;
+            width: 50px;
+            border-radius: 50px;
+        }
+
+        /* mainContent */
+        #maincontent {
+            margin: 10px;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+            align-items: center;
+        }
+
+        #content {
+            margin: 5px;
+        }
+
+        /* gamelist */
+        #list {
+            border: 2px solid aqua;
+        }
+
+        #list li {
+            border: 2px dotted aqua;
+            list-style: none;
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+
+            font-size: 20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            cursor: pointer;
+        }
+
+        #list li:hover {
+            box-shadow: inset 0px 0px 15px aqua;
+        }
+
+        /* description */
+        #description {
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            margin: 1px 4px;
+            text-align: center;
+        }
+
+        /* images */
+        #manyimg {
+            display: flex;
+            justify-content: space-evenly;
+
+            border-radius: 20px;
+            padding: 5px;
+            margin: 5px 2px;
+        }
+
+        .im {
+            cursor: pointer;
+
+            height: 100px;
+            width: auto;
+            opacity: 0.8;
+
+            border-radius: 20px;
+            transition: all 0.5s ease-in-out 0s;
+        }
+
+        .im:hover {
+            opacity: 1;
+            box-shadow: 0px 0px 15px aqua;
+        }
+
+        /* gameimage Main */
+        #gameimage {
+            height: 450px;
+            width: 750px;
+
+            box-shadow: 0px 0px 15px rgb(0, 97, 150);
+
+            border-radius: 30px;
+        }
+
+        /* delivery */
+        #delivery {
+            display: inline-block;
+            font-size: 18px;
+            margin: 10px;
+            cursor: pointer;
+
+            color: orange;
+        }
+
+        /* pricelist */
+        #pricing {
+            display: none;
+            border: 2px solid rgba(0, 193, 0, 0.5);
+        }
+
+        /* links */
+        #links {
+            display: none;
+        }
+
+        #links a {
+            display: block;
+            color: lightblue;
+            font-size: 17px;
+            margin: 5px;
+        }
+
+        /* section with main page content */
+        #onesec{
+            position: relative;
+        }
+        #onesec::before{
+            content: "";
+            background: url(bg.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -1;
+            opacity: 0.8;
+        }
+
+        /* about */
+        #about{
+            position: relative;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+        #about::before{
+            content: "";
+            background: url(bg2.jpg) no-repeat center center/cover;
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            z-index: -2;
+            opacity: 0.9;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="maincont">
+        
+        <!-- navigation bar -->
+        <div id="nav">
+            <div id="logo">
+                <img src="hacker.jpg" height="50px" width="50px" id="logoimage" alt="">
+            </div>
+            
+            <ul id="navitems">
+                <li id="home">Home</li>
+                <li id="price">Price List</li>
+                <li id="shop">Shopping Links</li>
+                <li id="contact"><a href="contactus.html">Contact Us</a></li>
+            </ul>
+        </div>
+        
+        <!-- section of main page content -->
+        <section id="onesec">
+            <!-- the main page content with images -->
+            <div id="maincontent">
+
+                <div id="content">
+                    <div id="gamelist">
+                        <ul id="list">
+                            <li id="game1" class="gametit">GOW</li>
+                            <li id="game2" class="gametit">GOT</li>
+                            <li id="game3" class="gametit">RDR2</li>
+                        </ul>
+                    </div>
+                    <p id="description">
+                        God of War Ragnarök is an action-adventure game developed by Santa Monica Studio and published
+                        by
+                        Sony Interactive Entertainment. It was released worldwide on November 9, 2022, for the
+                        PlayStation 4
+                        and PlayStation 5, marking the first cross-gen release in the God of War series.
+                    </p>
+                    <div id="manyimg">
+                        <img src="gowr1.jpg" alt="" id="manyimg1" class="im">
+                        <img src="gowr2.jpg" alt="" id="manyimg2" class="im">
+                        <img src="gowr3.jpg" alt="" id="manyimg3" class="im">
+                    </div>
+                </div>
+                <div id="mainimage">
+                    <img src="gowr.jpg" id="gameimage" alt="">
+                </div>
+            </div>
+
+        </section>
+
+        <div id="deets">
+            <div id="delivery">
+                🪧 select delivery location
+            </div>
+        </div>
+
+        <div id="about">
+            <h2 id="abouthead">About Us</h2>
+            <div id="aboutdesc">
+                <p id="aboutcontent1">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est omnis facere voluptatibus, ea
+                    laudantium accusantium qui officiis magnam totam minus, aliquid perspiciatis quaerat quam explicabo
+                    quidem ipsa recusandae blanditiis laboriosam amet veniam praesentium sit unde molestiae? At nihil
+                    eius dolorum vel architecto eaque est ipsum sed veniam doloremque corporis, tenetur ipsa, quidem
+                    assumenda nemo quasi rem non exercitationem voluptatum eos! Est reprehenderit quidem fugiat deserunt
+                    sed, illum accusamus fuga tempora ex! Eos modi cum consequatur! Recusandae nobis minima vel at ab
+                    aperiam perspiciatis adipisci dolore vero distinctio esse voluptatem accusamus omnis nulla culpa,
+                    dolores non a quasi magnam suscipit incidunt consectetur, officia quaerat. Blanditiis tenetur
+                    voluptatibus iure suscipit molestiae illo, dicta ex assumenda accusamus odit, quisquam voluptas.
+                    Perspiciatis veritatis odit quas ipsum. Perspiciatis ipsam quo nihil alias atque enim accusantium
+                    omnis fugiat optio odio. Alias ipsam voluptatum perspiciatis dolor ex quod eum unde veritatis quia
+                    dolorem, laborum nemo ipsa ad dignissimos dolore nisi vero odio molestias minima quaerat. Animi est
+                    ipsa nostrum, repellat sapiente accusamus laboriosam magnam unde, nisi labore sunt, recusandae quasi
+                    nobis mollitia rerum doloribus suscipit? Numquam saepe porro autem aliquid! Doloremque similique
+                    consequuntur molestiae cumque nam soluta asperiores inventore. Voluptatum dolorem perspiciatis
+                    facilis non itaque voluptas explicabo.
+                </p>
+                <p id="aboutcontent2">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium minima alias quibusdam? Dolorum
+                    magnam deserunt corrupti molestias consectetur iure explicabo omnis temporibus ducimus molestiae.
+                    Dolor est odit praesentium animi incidunt eligendi vitae molestias iste officiis, facere ab velit
+                    quibusdam quis porro tempore adipisci tenetur voluptatum nulla ea natus consectetur perferendis
+                    autem optio? Aut, aperiam! Maiores corporis inventore aspernatur modi debitis, blanditiis obcaecati
+                    alias nostrum, saepe est magni ratione! Magni suscipit ipsa veritatis dolore hic delectus quisquam
+                    consequuntur optio voluptas! Vel nihil nulla odit id maiores necessitatibus officiis minus, soluta
+                    possimus sit. Quo aut reiciendis eius pariatur. Praesentium ratione minus error.
+                </p>
+            </div>
+            <!-- price list -->
+            <div id="pricelist">
+                <ul id="pricing">
+                    <h4 style="font-size: 18px;color: lime;">GOW</h4>
+                    <li>Ps4: 2000</li>
+                    <li>Ps5: 2800</li>
+                    <h4 style="font-size: 18px;color: lime;">GOT</h4>
+                    <li>Ps4: 2000</li>
+                    <li>Ps5: 2800</li>
+                    <h4 style="font-size: 18px;color: lime;">RDR2</h4>
+                    <li>Ps4: 2000</li>
+                    <li>Ps5: 2800</li>
+                </ul>
+            </div>
+            <!-- shopping links -->
+            <div id="links">
+                <div id="linkcont">
+                    <a href="#" id="link1">God Of War </a>
+                    <a href="#" id="link2">Ghost Of Tsushima</a>
+                    <a href="#" id="link3">Red Dead Redemption 2</a>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+
+    <!----------------------JAVASCRIPT*------------- -->
+
+    <script>
+        // store each game title
+        const game1 = document.getElementById("game1");
+        const game2 = document.getElementById("game2");
+        const game3 = document.getElementById("game3");
+
+        // store description
+        const desc = document.getElementById("description");
+
+        // store each small image
+        const im1 = document.getElementById("manyimg1");
+        const im2 = document.getElementById("manyimg2");
+        const im3 = document.getElementById("manyimg3");
+
+        // store each small image in class
+        const im = document.getElementsByClassName("im");
+
+        // store main image
+        const gameimg = document.getElementById("gameimage");
+
+        // store each game title
+        const gametit = document.getElementsByClassName("gametit");
+
+        // storing delivery 
+        const deli = document.querySelector("#delivery");
+
+
+        let allgames = [
+            {
+                description: "God of War Ragnarök is an action-adventure game developed by Santa Monica Studio and published by Sony Interactive Entertainment. It was released worldwide on November 9, 2022, for the PlayStation 4 and PlayStation 5, marking the first cross-gen release in the God of War series. ", mainimage: "gowr.jpg"
+            },
+            {
+                description: "Ghost of Tsushima is a 2020 action-adventure game developed by Sucker Punch Productions and published by Sony Interactive Entertainment. The player controls Jin Sakai, a samurai on a quest to protect Tsushima Island during the first Mongol invasion of Japan.", mainimage: "ghost.jpg"
+            },
+            {
+                description: "America, 1899. After a robbery goes wrong in the town of Blackwater, Arthur Morgan and the Van der Linde gang are forced to flee. With federal agents and bounty hunters massing on their heels, the gang must rob, steal and fight their way to survive.", mainimage: "rdr2.jpg"
+            }
+        ]
+
+        let allsmallimages = [
+            {
+                im1: "gowr1.jpg", im2: "gowr2.jpg", im3: "gowr3.jpg"
+            },
+            {
+                im1: "ghost1.jpg", im2: "ghost2.jpg", im3: "ghost3.jpg"
+            },
+            {
+                im1: "rd1.jpg", im2: "rd2.jpg", im3: "rd3.jpg"
+            }
+        ]
+
+        // changing content when different games clicked
+        for (let i = 0; i < 3; i++) {
+            gametit[i].addEventListener("click", function change() {
+                desc.innerHTML = allgames[i]["description"];
+                im1.src = allsmallimages[i]["im1"];
+                im2.src = allsmallimages[i]["im2"];
+                im3.src = allsmallimages[i]["im3"];
+                gameimg.src = allgames[i]["mainimage"];
+            });
+
+            // changing main image when small images clicked
+            im[i].addEventListener("click", function changeimg() {
+                gameimg.src = im[i].src;
+            });
+        }
+
+        // delivery location
+        const pin = document.createElement("input");
+
+        deli.addEventListener("mouseover", function loc() {
+            deli.append(pin);
+        });
+
+        pin.addEventListener("blur", function submitpin() {
+            let val = pin.value;
+            pin.remove();
+            alert("The pin tou entered was " + val);
+        });
+
+
+        // navbar links
+        const home = document.getElementById("home");
+        const price = document.getElementById("price");
+        const shop = document.getElementById("shop");
+        const contact = document.getElementById("contact");
+
+        const about = document.getElementById("about");
+        const aboutdesc = document.getElementById("aboutdesc");
+        const abouthead = document.getElementById("abouthead");
+
+        const pricing = document.getElementById("pricing");
+
+        const links = document.getElementById("links");
+
+        // clicking home
+        home.addEventListener("click", function hm() {
+            abouthead.innerHTML = "<h4>About Us</h4>"
+            aboutdesc.style.display = "block"
+            aboutdesc.innerHTML = aboutdesc.innerHTML;
+            pricing.style.display = "none";
+            links.style.display = "none";
+        });
+
+        // clicking price list
+        price.addEventListener("click", function pr() {
+            abouthead.innerHTML = "<h4>Price List</h4>";
+            aboutdesc.style.display = "none";
+            pricing.style.display = "block";
+            links.style.display = "none";
+        });
+
+        // clicking shopping links
+        shop.addEventListener("click", function lnk() {
+            abouthead.innerHTML = "<h4>Shopping Links</h4>"
+            pricing.style.display = "none";
+            links.style.display = "block";
+            aboutdesc.style.display = "none"
+        });
+
+
+    </script>
+
+</body>
+
+</html>
